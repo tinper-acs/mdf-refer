@@ -1,7 +1,7 @@
 /**
  *
- * @title mdf-refer基础使用2
- * @description <MdfRefer/>初始化参照，并搭配bee-from进行校验
+ * @title mdf-refer基础使用5
+ * @description 不带有input框的参照，关键 model.setvisible(false) 和model.browse()
  *
  */
 import React, { Component } from 'react';
@@ -16,17 +16,10 @@ class Demo5 extends Component {
         this.model = new cb.models.ReferModel({
             cRefType:'ucf-org-center.bd_adminorgtreeviewref',
         });
-        // this.config = {
-        //     modelconfig:{
-        //         afterValueChange:this.afterValueChange,
-        //     }
-        // }
+        this.model.setVisible(false);
+       
     }
-    
-    // afterValueChange = (data) =>{
-    //     console.log('demo2的js'+JSON.stringify(data))
-    // }
-    
+        
     openRefer = () =>{
         this.model.browse();
     }
