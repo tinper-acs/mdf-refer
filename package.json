@@ -8,6 +8,7 @@
     "clear": "rimraf dist && rimraf lib",
     "clear:gh-pages": "rimraf ghpages",
     "build": "npm run clear && webpack --progress --config config/webpack.config.prod.js && gulp",
+    "umd": "rimraf umd  && webpack --progress --config config/webpack.config.umd.js",
     "dev": "webpack-dev-server --progress --config config/webpack.config.dev.js",
     "lint": "eslint --ext .js --ext .jsx src/",
     "lint-fix": "eslint --fix --ext .js --ext .jsx src/",

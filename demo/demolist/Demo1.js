@@ -16,20 +16,6 @@ class Demo1 extends Component {
             selectedKeys:[],
         }
         this.afterOkClick = this.afterOkClick.bind(this);
-        // this.setValue = this.setValue.bind(this);
-    }
-    
-    componentDidMount(){
-        let data = {};
-    }
-    componentDidUpdate(){
-    }
-    componentWillReceiveProps(nextProps){
-    }
-    afterOkClick = (data) =>{
-        console.log('demo2的afterOkClick',JSON.stringify(data));
-    }
-    render () {
         this.model = new cb.models.ReferModel({
             cRefType:'ucf-org-center.bd_adminorgtreeviewref',
             multiple:true,
@@ -47,16 +33,24 @@ class Demo1 extends Component {
             multiple:true,
         });
 
-        let config = {};
-        config.modelconfig ={
+        this.config = {};
+        this.config.modelconfig ={
             afterOkClick:this.afterOkClick
         }
+    }
+   
+    afterOkClick = (data) =>{
+        console.log('demo2的afterOkClick',JSON.stringify(data));
+    }
+    render () {
+       
+
         return (
             <div  className='demo'>
                 <label>参照-组织树</label> 
-                {cb.utils.initSupport('refer',this.model,config)}
+                {cb.utils.initSupport('refer',this.model,this.config)}
                <label>参照-人员表</label> 
-                {cb.utils.initSupport('refer',this.model2,config)}
+                {cb.utils.initSupport('refer',this.model2,this.config)}
                  <label>参照-物料树表</label> 
                 {cb.utils.initSupport('refer',this.model3)}
             </div>
