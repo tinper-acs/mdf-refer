@@ -28,7 +28,7 @@ import TreeRefer from '@mdf/metaui-web/lib/components/basic/treerefer';
 import filterscheme from '@mdf/metaui-web/lib/redux/filterscheme';
 
 // import './styles/default/filtercontainer.jsx'
-import './index.less';
+// import './index.less';
 
 const store = createStore(combineReducers({
   filterscheme,
