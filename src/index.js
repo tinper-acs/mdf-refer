@@ -20,8 +20,8 @@ import '@mdf/cube/lib/helpers/polyfill'
 import { UretailAlert, UretailConfirm } from '@mdf/metaui-web/lib/components/common/UretailNotice';
 
 import ConvenientQuery from '@mdf/metaui-web/lib/components/filter';
-// import Refer from '@mdf/metaui-web/lib/components/basic/refer';
-import Refer from '@mdf/metaui-web-ncc/lib/components/basic/refer';
+import Refer from '@mdf/metaui-web/lib/components/basic/refer';
+// import Refer from '@mdf/metaui-web-ncc/lib/components/basic/refer';
 
 import ListRefer from '@mdf/metaui-web/lib/components/basic/listrefer';
 import TreeRefer from '@mdf/metaui-web/lib/components/basic/treerefer';
