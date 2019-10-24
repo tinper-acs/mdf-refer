@@ -44,8 +44,6 @@ config.modelconfig ={
 <MdfRefer modelName={'refer'} model={model} config={config} >
 
 
-如果配合bee-form组件使用时候建议使用第二种
-
 ```
 
 ## 代码演示
