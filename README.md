@@ -7,18 +7,22 @@
 
 ## 如何使用
 安装
-```
+```shell
 ynpm install mdf-refer --save
+```
+引入antd的样式
 
-
+```html
+<link href="http://iuap-design-cdn.oss-cn-beijing.aliyuncs.com/static/antd/antd.css" rel="stylesheet" type="text/css">
 
 ```
 
+```javascript
 
-```
 import 'mdf-refer/lib/index.less'
 import MdfRefer  from 'mdf-refer/lib/index.js'
-1.首先创建model对象
+
+//1.首先创建model对象
 
 let model = new cb.models.MdfReferModel({
   cRefType:'ucf-org-center.org_assets_tree_ref',
@@ -28,14 +32,14 @@ let model = new cb.models.MdfReferModel({
   text:'ybt01__智能公司',//设置初始值
 });
 
-2. 可以添加方法
+//2. 可以添加方法
 
 let config = {};
 config.modelconfig ={
   afterOkClick:this.afterOkClick
 }
 
-3.调用参照
+//3.调用参照
 
 <MdfRefer modelName={'refer'} model={model} config={config} >
 
